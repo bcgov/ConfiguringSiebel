@@ -1,0 +1,28 @@
+#!/bin/bash
+while getopts u:p:a:b:n: option
+do
+ case "${option}"
+ in
+ u)  export USER=${OPTARG};;
+ p)  export PASS=${OPTARG};;
+ a)  export SAIHOST=${OPTARG};;
+ b)  export SAIPORT=${OPTARG};;
+ n)  export NAME=${OPTARG};;
+
+ esac
+done
+ENCODED="$(echo $USER:$PASS|base64)"
+
+JSON=$(envsubst<../smc/createMigProfile.json)
+
+echo
+echo $JSON
+echo
+
+echo $JSON |  curl -v  -k \
+ -H "Authorization: Basic $ENCODED" \
+ -H "Content-Type: application/json" \
+ -X POST \
+https://$SAIHOST:$SAIPORT/siebel/v1.0/cloudgateway/profiles/migrations/ \
+-d @-
+
