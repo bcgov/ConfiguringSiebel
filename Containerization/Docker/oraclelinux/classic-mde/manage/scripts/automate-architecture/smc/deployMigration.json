@@ -1,0 +1,8 @@
+{
+  "DeploymentInfo": {
+    "PhysicalHostIP": "sai-{{NAME}}.company.com:4430",
+    "ProfileName": "$PROFILE",
+    "Action": "Deploy"
+  },
+  "MigrationDeployParams": { "SiebelMigration": "$NAME", "MigrationDesc": "MIG" }
+}

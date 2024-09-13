@@ -85,4 +85,9 @@ bash ${ROOT}/smc/deploySAI -u ${USER} -p ${PASSWD} -a ${HWSERVER} -b ${PORT} -e 
 bash ${ROOT}/smc/createSAIProfile -u ${USER} -p ${PASSWD} -a ${HWSERVER} -b ${PORT} -n CCWebTools2 -l ${ANONUSER} -m ${ANONPASS} -s sai2-${ENTERPRISE1}.${DOMAIN} -t ${PORT} -f createSAI2Profile.json
 sleep $pause
 bash ${ROOT}/smc/deploySAI -u ${USER} -p ${PASSWD} -a ${HWSERVER} -b ${PORT} -e AI_Two -f AI_Two -d CCWebTools2 -h sai2-${ENTERPRISE1}.${DOMAIN} -i 4430
+
+# migration
+bash ${ROOT}/smc/createMigProfile -u ${USER} -p ${PASSWD} -a ${HWSERVER} -b ${PORT} -n myMigProfile
+sleep $pause
+bash ${ROOT}/smc/deployMigration -u ${USER} -p ${PASSWD} -a ${HWSERVER} -b ${PORT} -d myMigProfile -n MIG
 date
