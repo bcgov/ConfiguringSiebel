@@ -25,7 +25,7 @@ curl -i -v  -k   \
 -X DELETE \
 https://$SAIHOST:$SAIPORT/siebel/v1.0/cloudgateway/deployments/migrations/$NAME
 
-echo $JSON |  curl -v  -k -H "Content-Length: ${#JSON}"  \
+echo $JSON |  curl -v  -k \
  -H "Authorization: Basic $ENCODED" \
  -H "Content-Type: application/json" \
  -X POST \
