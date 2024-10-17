@@ -36,6 +36,7 @@ docker run \
 	--network-alias ${NAME}.${DOMAIN} \
 	--name ${NAME} \
 	-e "containerMode=SAI" \
+	-e "TZ=America/Vancouver" \
 	-p ${PORT}:4430 \
 	-v ${VOL}:/persistent \
 	-v ${SFSVOL}:/sfs \
