@@ -45,6 +45,7 @@ docker run \
 	-v ${VOL}:/persistent \
 	-v ${SFS}:/sfs \
 	-e "containerMode=SES" \
+	-e "TZ=America/Vancouver" \
 	-e "tnsConnectString=${DBCSTR}" \
         -e "dbServerName=${DBHOST}" \
         -e "dbPort=${DBPORT}" \

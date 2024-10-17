@@ -43,6 +43,7 @@ docker run \
 	-v ${VOL}:/persistent \
 	-v ${SFS}:/sfs \
 	-e "containerMode=CGW" \
+	-e "TZ=America/Vancouver" \
 	-u ${USER} \
 	--stop-timeout 300 \
 	${CONTAINERBASE}:${REL}
