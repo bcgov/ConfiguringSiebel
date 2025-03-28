@@ -56,7 +56,8 @@
           "AnonUserName": "$ANONUSER",
           "AnonPassword": "$ANONPASS",
           "TrustToken": "HELLO",
-          "UserSpec": "X-Forwarded-Preferred-Username"
+          "UserSpec": "X-Forwarded-Preferred-Username",
+          "MaxTabs": 10
         }
       },
       {
@@ -75,7 +76,8 @@
           "SessionTokenTimeout": 9000,
           "SingleSignOn": false,
           "AnonUserName": "$ANONUSER",
-          "AnonPassword": "$ANONPASS"
+          "AnonPassword": "$ANONPASS",
+          "MaxTabs": 10
         }
       },
       {
