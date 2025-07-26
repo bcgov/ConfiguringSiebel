@@ -17,7 +17,6 @@
     },
     "RESTInBound": {
       "RESTAuthenticationProperties": {
-        "EnableAnonAccess": false,
         "AnonUserName": "$ANONUSER",
         "AnonPassword": "$ANONPASS",
         "AuthenticationType": "Basic",
@@ -25,7 +24,7 @@
         "ValidateCertificate": false
       },
       "LogProperties": { "LogLevel": "ERROR" },
-      "ObjectManager": "eaiobjmgr_ism",
+      "ObjectManager": "eaiobjmgr_enu",
       "Baseuri": "https://{{urlHost}}/{{urlContext}}/v1.0/",
       "MaxConnections": 20,
       "RESTResourceParamList": []
@@ -37,41 +36,38 @@
     "SOAPOutBound": { "LogProperties": { "LogLevel": "ERROR" } },
     "Applications": [
       {
-        "Name": "epublicsector",
-        "ObjectManager": "dbssopsccobjmgr_enu",
+        "Name": "callcenter",
+        "ObjectManager": "sccobjmgr_enu",
         "Language": "enu",
         "StartCommand": "",
         "EnableExtServiceOnly": false,
         "AvailableInSiebelMobile": false,
         "AuthenticationProperties": {
-          "SessionTimeout": 9000,
+          "SessionTimeout": 36000,
           "GuestSessionTimeout": 300,
           "SessionTimeoutWLMethod": "HeartBeat",
           "SessionTimeoutWLCommand": "UpdatePrefMsg",
           "SessionTokenMaxAge": 2880,
-          "SessionTokenTimeout": 9000,
-          "SingleSignOn": true,
+          "SessionTokenTimeout": 3600,
+          "SingleSignOn": false,
           "AnonUserName": "$ANONUSER",
-          "AnonPassword": "$ANONPASS",
-          "TrustToken": "HELLO",
-          "UserSpec": "X-Forwarded-Preferred-Username",
-          "MaxTabs": 10
+          "AnonPassword": "$ANONPASS"
         }
       },
       {
-        "Name": "epublicsector_db",
+        "Name": "epublicsector",
         "ObjectManager": "psccobjmgr_enu",
         "Language": "enu",
         "StartCommand": "",
         "EnableExtServiceOnly": false,
         "AvailableInSiebelMobile": false,
         "AuthenticationProperties": {
-          "SessionTimeout": 9000,
+          "SessionTimeout": 36000,
           "GuestSessionTimeout": 300,
           "SessionTimeoutWLMethod": "HeartBeat",
           "SessionTimeoutWLCommand": "UpdatePrefMsg",
           "SessionTokenMaxAge": 2880,
-          "SessionTokenTimeout": 9000,
+          "SessionTokenTimeout": 36000,
           "SingleSignOn": false,
           "AnonUserName": "$ANONUSER",
           "AnonPassword": "$ANONPASS",
@@ -86,12 +82,12 @@
         "EnableExtServiceOnly": false,
         "AvailableInSiebelMobile": false,
         "AuthenticationProperties": {
-          "SessionTimeout": 9000,
+          "SessionTimeout": 36000,
           "GuestSessionTimeout": 300,
           "SessionTimeoutWLMethod": "HeartBeat",
           "SessionTimeoutWLCommand": "UpdatePrefMsg",
           "SessionTokenMaxAge": 2880,
-          "SessionTokenTimeout": 9000,
+          "SessionTokenTimeout": 36000,
           "SingleSignOn": false,
           "AnonUserName": "$ANONUSER",
           "AnonPassword": "$ANONPASS"
