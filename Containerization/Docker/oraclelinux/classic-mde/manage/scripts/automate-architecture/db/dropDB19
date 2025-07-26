@@ -1,4 +1,4 @@
-dbFileLocation=/scratch/persistent/PV/ORCL19/ORCLCDB
+dbFileLocation={{PV}}/ORCL19/ORCLCDB
 dbPath=/opt/oracle/oradata/ORCLCDB
 dbConnect="sys/Oradoc_db1@oracle19c:1521/ORCLCDB as sysdba"
 

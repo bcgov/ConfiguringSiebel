@@ -1,6 +1,6 @@
 {
   "MigrationConfigParams": {
-    "SiebelRESTEndpoint": "https://sai2-{{NAME}}.company.com:4430/{{icmSiebelName}}/v1.0",
+    "SiebelRESTEndpoint": "https://sai2-{{NAME}}.company.com:4430/{{urlContext}}/v1.0",
     "AuthenticationType": "Basic",
     "LogLevel": "Error",
     "Timeout": 900000,
