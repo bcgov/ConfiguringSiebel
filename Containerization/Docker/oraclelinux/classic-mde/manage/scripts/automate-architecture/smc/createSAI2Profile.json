@@ -25,7 +25,7 @@
         "ValidateCertificate": false
       },
       "LogProperties": { "LogLevel": "ERROR" },
-      "ObjectManager": "eaiobjmgr_ism",
+      "ObjectManager": "eaiobjmgr_enu",
       "Baseuri": "https://{{urlHost}}/{{urlContext}}/v1.0/",
       "MaxConnections": 20,
       "RESTResourceParamList": []
